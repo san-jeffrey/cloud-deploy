@@ -1,13 +1,545 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" data-theme="dark">
 <head>
-<title>CloudDeploy</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>San Jeffrey D | Cloud &amp; DevOps Engineer</title>
+  <meta name="description" content="Portfolio of San Jeffrey D - IT Graduate building a career in Cloud Engineering, DevOps, and Cloud Support. Hands-on with AWS, Docker, Linux, Git, and CI/CD." />
+  <meta name="keywords" content="San Jeffrey D, Cloud Engineer, DevOps Engineer, Cloud Support, AWS, Docker, Linux, Git, GitHub Actions, Nginx, CI/CD, Kanyakumari" />
+  <meta property="og:title" content="San Jeffrey D | Cloud &amp; DevOps Engineer" />
+  <meta property="og:description" content="IT Graduate specializing in Cloud Infrastructure, DevOps automation, containerization with Docker, and AWS." />
+  <meta property="og:type" content="website" />
+
+  <!-- Google Fonts: Inter & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- FontAwesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+
+  <!-- Devicon for Tech & Cloud Brand Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css" />
+
+  <!-- Custom Master Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
+  <!-- Top reading/scroll progress bar -->
+  <div class="scroll-progress-bar" id="scroll-progress-bar"></div>
 
-<h1>My DevOps Journey Begins 🚀</h1>
+  <!-- Interactive constellation background canvas -->
+  <canvas id="particle-canvas" aria-hidden="true"></canvas>
 
+  <!-- Ambient background glow mesh -->
+  <div class="bg-mesh" aria-hidden="true"></div>
+
+  <!-- Navigation Bar -->
+  <header>
+    <nav class="navbar" id="navbar">
+      <div class="container nav-container">
+        <a href="#hero" class="nav-brand" aria-label="San Jeffrey D Home">
+          <div class="brand-icon">&gt;_</div>
+          <span class="brand-text">san.<span>devops</span></span>
+        </a>
+
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#experience" class="nav-link">Experience &amp; Certs</a></li>
+          <li><a href="#terminal" class="nav-link">Terminal</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <button class="theme-toggle-btn" id="theme-toggle" aria-label="Toggle visual theme" title="Toggle Light / Dark Mode">
+            <i class="fa-solid fa-moon theme-icon-dark"></i>
+            <i class="fa-solid fa-sun theme-icon-light"></i>
+          </button>
+          
+          <a href="https://www.linkedin.com/in/san-jeffrey-95a589354/" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="padding: 0.5rem 1rem; font-size: 0.85rem;">
+            <i class="fa-brands fa-linkedin"></i> Connect
+          </a>
+
+          <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="section hero" id="hero">
+      <div class="container">
+        <div class="hero-grid">
+          <!-- Text Content -->
+          <div class="hero-content">
+            <div class="hero-badge-container">
+              <div class="status-badge">
+                <span class="status-pulse"></span>
+                <span>Open to Junior &amp; Associate Cloud / DevOps Roles</span>
+              </div>
+            </div>
+
+            <h1 class="hero-title">
+              Hi, I'm <span class="gradient-text">San Jeffrey D</span>
+            </h1>
+
+            <div class="hero-typed-wrapper">
+              <span>&gt; </span>
+              <span id="typed-text">Junior DevOps Engineer</span>
+              <span class="typed-cursor"></span>
+            </div>
+
+            <p class="hero-description">
+              Information Technology graduate with hands-on experience in IT support, system troubleshooting, Linux, Docker, Git, AWS, and cloud infrastructure. Dedicated to building reliable, automated, and scalable cloud environments through DevOps practices.
+            </p>
+
+            <!-- Target Roles Quick Badges -->
+            <div style="display: flex; flex-wrap: wrap; gap: 0.45rem; margin-top: -0.5rem;">
+              <span class="tag-chip" style="color: var(--accent-primary);"><i class="fa-solid fa-check"></i> Junior DevOps</span>
+              <span class="tag-chip" style="color: var(--accent-primary);"><i class="fa-solid fa-check"></i> Associate Cloud Engineer</span>
+              <span class="tag-chip" style="color: var(--accent-primary);"><i class="fa-solid fa-check"></i> Cloud Support Engineer</span>
+              <span class="tag-chip" style="color: var(--accent-primary);"><i class="fa-solid fa-check"></i> Cloud Operations</span>
+            </div>
+
+            <div class="hero-actions">
+              <a href="https://github.com/san-jeffrey/cloud-deploy" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <i class="fa-brands fa-github"></i> View My GitHub
+              </a>
+              <a href="https://www.linkedin.com/in/san-jeffrey-95a589354/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <i class="fa-brands fa-linkedin"></i> Connect on LinkedIn
+              </a>
+              <a href="#terminal" class="btn btn-secondary">
+                <i class="fa-solid fa-terminal"></i> Terminal Shell
+              </a>
+            </div>
+
+            <div class="hero-socials">
+              <a href="https://github.com/san-jeffrey/cloud-deploy" target="_blank" rel="noopener noreferrer" class="social-link" title="GitHub Profile">
+                <i class="fa-brands fa-github"></i>
+              </a>
+              <a href="https://www.linkedin.com/in/san-jeffrey-95a589354/" target="_blank" rel="noopener noreferrer" class="social-link" title="LinkedIn Profile">
+                <i class="fa-brands fa-linkedin"></i>
+              </a>
+              <a href="https://www.credly.com/go/x3OfPJyM" target="_blank" rel="noopener noreferrer" class="social-link" title="AWS Academy Credly Badge" style="color: var(--accent-amber);">
+                <i class="fa-solid fa-award"></i>
+              </a>
+              <a href="#contact" class="social-link" title="Get in Touch">
+                <i class="fa-regular fa-envelope"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Avatar & Visual Badges -->
+          <div class="hero-visual">
+            <div class="avatar-card">
+              <div class="avatar-glow"></div>
+              <div class="avatar-img-wrap">
+                <img src="assets/avatar.svg" alt="San Jeffrey D - Cloud &amp; DevOps" />
+              </div>
+
+              <!-- Floating Tech Badges -->
+              <div class="tech-badge-floating badge-pos-1">
+                <i class="devicon-amazonwebservices-original colored"></i>
+                <span>AWS Cloud</span>
+              </div>
+              <div class="tech-badge-floating badge-pos-2">
+                <i class="devicon-docker-plain colored"></i>
+                <span>Docker</span>
+              </div>
+              <div class="tech-badge-floating badge-pos-3">
+                <i class="devicon-linux-plain colored"></i>
+                <span>Linux Admin</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Metric / Background Strip -->
+        <div class="stats-strip" id="stats-strip">
+          <div class="stat-item">
+            <div class="stat-number" data-count="2025" data-suffix=" (May)">May 2025</div>
+            <div class="stat-label">B.Tech in Information Technology</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number" data-count="60" data-suffix=" Hrs">60 Hrs</div>
+            <div class="stat-label">AWS Academy Cloud Architecting</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number" data-count="8" data-suffix=" Mos">8 Mos</div>
+            <div class="stat-label">IT Support Executive Experience</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number" data-count="100" data-suffix="%">100%</div>
+            <div class="stat-label">Hands-On Cloud &amp; DevOps Focus</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">
+            <i class="fa-solid fa-user-gear"></i> Professional Profile
+          </div>
+          <h2 class="section-title">About <span class="gradient-text">San Jeffrey D</span></h2>
+          <p class="section-subtitle">Bridging practical IT support troubleshooting with cloud engineering, containerization, and automated DevOps workflows.</p>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-card">
+            <h3><i class="fa-solid fa-id-card"></i> Professional Summary</h3>
+            <p class="about-text">
+              I am an Information Technology graduate building my career in Cloud Engineering and DevOps, with hands-on experience in IT support, system troubleshooting, Git, GitHub, Linux, Docker, AWS, and cloud infrastructure.
+            </p>
+            <p class="about-text">
+              I enjoy working with infrastructure, automation, containerization, deployment pipelines, and troubleshooting technical issues. I am continuously developing my skills in CI/CD, Infrastructure as Code, Kubernetes, and cloud technologies while building practical projects that simulate real-world DevOps environments.
+            </p>
+            <div style="background: var(--bg-surface-elevated); border: 1px solid var(--border-subtle); padding: 1.1rem; border-radius: var(--radius-md); margin-top: auto;">
+              <span style="font-size: 0.8rem; font-weight: 700; color: var(--accent-primary); text-transform: uppercase; letter-spacing: 0.08em; display: block; margin-bottom: 0.35rem;">
+                <i class="fa-solid fa-bullseye"></i> Career Goal Statement
+              </span>
+              <p style="font-size: 0.95rem; font-style: italic; color: var(--text-primary); margin: 0;">
+                "Building reliable, automated, and scalable cloud infrastructure through DevOps practices."
+              </p>
+            </div>
+          </div>
+
+          <div class="about-card">
+            <h3><i class="fa-solid fa-compass"></i> Career Focus &amp; Target Roles</h3>
+            <p class="about-text">
+              Actively preparing and interviewing for early-career and junior positions across Cloud and DevOps domains:
+            </p>
+
+            <div class="pillars-grid">
+              <div class="pillar-item">
+                <i class="fa-solid fa-infinity pillar-icon"></i>
+                <h4 class="pillar-title">DevOps Roles</h4>
+                <p class="pillar-desc">Junior DevOps Engineer • DevOps Engineer – Fresher/Junior • CI/CD &amp; Automation.</p>
+              </div>
+
+              <div class="pillar-item">
+                <i class="fa-solid fa-cloud pillar-icon"></i>
+                <h4 class="pillar-title">Cloud Engineering</h4>
+                <p class="pillar-desc">Associate Cloud Engineer • Junior Cloud Engineer • AWS Cloud Infrastructure.</p>
+              </div>
+
+              <div class="pillar-item">
+                <i class="fa-solid fa-headset pillar-icon"></i>
+                <h4 class="pillar-title">Cloud Support</h4>
+                <p class="pillar-desc">Cloud Support Engineer • Cloud Operations Engineer • Infrastructure Troubleshooting.</p>
+              </div>
+
+              <div class="pillar-item">
+                <i class="fa-solid fa-location-dot pillar-icon"></i>
+                <h4 class="pillar-title">Location &amp; Availability</h4>
+                <p class="pillar-desc">Kanyakumari, Tamil Nadu, India • Open to On-site, Hybrid &amp; Remote Opportunities.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Matrix Section -->
+    <section class="section" id="skills">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">
+            <i class="fa-solid fa-layer-group"></i> Technical Skills
+          </div>
+          <h2 class="section-title">Technical <span class="gradient-text">Skills &amp; Competencies</span></h2>
+          <p class="section-subtitle">Categorized proficiencies across AWS Cloud, Docker containerization, Linux administration, Git workflows, and DevOps automation.</p>
+        </div>
+
+        <div class="skills-grid" id="skills-container">
+          <!-- Populated dynamically from projects.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Projects Section -->
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">
+            <i class="fa-solid fa-diagram-project"></i> Practical Projects
+          </div>
+          <h2 class="section-title">DevOps &amp; Cloud <span class="gradient-text">Projects</span></h2>
+          <p class="section-subtitle">Real-world deployment platform development and hands-on cloud infrastructure labs.</p>
+        </div>
+
+        <!-- Filter Buttons -->
+        <div class="project-filters">
+          <button class="filter-btn active" data-filter="all">All Projects</button>
+          <button class="filter-btn" data-filter="devops">CloudDeploy Platform</button>
+          <button class="filter-btn" data-filter="cloud">DevOps Hands-On Labs</button>
+        </div>
+
+        <!-- Projects Grid -->
+        <div class="projects-grid" id="projects-grid">
+          <!-- Populated dynamically from projects.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience, Education & Certifications Section -->
+    <section class="section" id="experience">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">
+            <i class="fa-solid fa-briefcase"></i> Experience &amp; Credentials
+          </div>
+          <h2 class="section-title">Work Experience, <span class="gradient-text">Education &amp; Certification</span></h2>
+          <p class="section-subtitle">Professional IT support background, academic degree in Information Technology, and verified AWS Academy certification.</p>
+        </div>
+
+        <div class="timeline-cert-grid">
+          <!-- Career Experience Timeline -->
+          <div>
+            <h3 style="font-size: 1.3rem; font-weight: 800; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.6rem; color: var(--accent-primary);">
+              <i class="fa-solid fa-user-tie"></i> Professional Experience
+            </h3>
+            <div class="timeline" id="experience-timeline">
+              <!-- Populated dynamically from projects.js -->
+            </div>
+          </div>
+
+          <!-- Education & Certifications Column -->
+          <div style="display: flex; flex-direction: column; gap: 2rem;">
+            <!-- Education -->
+            <div>
+              <h3 style="font-size: 1.3rem; font-weight: 800; margin-bottom: 1.2rem; display: flex; align-items: center; gap: 0.6rem; color: var(--accent-primary);">
+                <i class="fa-solid fa-graduation-cap"></i> Education
+              </h3>
+              <div id="education-card-container">
+                <!-- Populated dynamically from projects.js -->
+              </div>
+            </div>
+
+            <!-- Certification -->
+            <div>
+              <h3 style="font-size: 1.3rem; font-weight: 800; margin-bottom: 1.2rem; display: flex; align-items: center; gap: 0.6rem; color: var(--accent-amber);">
+                <i class="fa-solid fa-certificate"></i> Prominent Certification
+              </h3>
+              <div class="cert-cards-list" id="certs-list">
+                <!-- Populated dynamically from projects.js -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Terminal Section -->
+    <section class="section" id="terminal">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">
+            <i class="fa-solid fa-terminal"></i> Interactive Playground
+          </div>
+          <h2 class="section-title">DevOps <span class="gradient-text">Interactive Shell</span></h2>
+          <p class="section-subtitle">Interact directly with my cloud playground! Type commands below or click any chip to run instantly.</p>
+        </div>
+
+        <div class="terminal-wrapper">
+          <!-- Terminal Window Header -->
+          <div class="terminal-header">
+            <div class="terminal-dots">
+              <span class="terminal-dot dot-red" title="Close"></span>
+              <span class="terminal-dot dot-yellow" title="Minimize"></span>
+              <span class="terminal-dot dot-green" title="Maximize"></span>
+            </div>
+            <div class="terminal-title">san-jeffrey@cloud-ops: ~ (bash / zsh)</div>
+            <div style="font-size: 0.75rem; color: #64748b;">Cloud Shell v2.4</div>
+          </div>
+
+          <!-- Quick Command Chips -->
+          <div class="terminal-chips">
+            <span class="terminal-chips-label">Quick Commands:</span>
+            <button class="term-btn" onclick="runTerminalCommand('help')">help</button>
+            <button class="term-btn" onclick="runTerminalCommand('about')">about</button>
+            <button class="term-btn" onclick="runTerminalCommand('skills')">skills</button>
+            <button class="term-btn" onclick="runTerminalCommand('projects')">projects</button>
+            <button class="term-btn" onclick="runTerminalCommand('certs')">certs</button>
+            <button class="term-btn" onclick="runTerminalCommand('experience')">experience</button>
+            <button class="term-btn" onclick="runTerminalCommand('education')">education</button>
+            <button class="term-btn" onclick="runTerminalCommand('deploy')">deploy</button>
+            <button class="term-btn" onclick="runTerminalCommand('contact')">contact</button>
+            <button class="term-btn" onclick="runTerminalCommand('clear')">clear</button>
+          </div>
+
+          <!-- Terminal Output & Input -->
+          <div class="terminal-body" id="terminal-body">
+            <div class="terminal-history" id="terminal-history"></div>
+            
+            <div class="terminal-input-row">
+              <span class="term-prompt">san-jeffrey@cloud-ops:~$</span>
+              <input 
+                type="text" 
+                id="terminal-input" 
+                class="term-input" 
+                placeholder="type a command ('help', 'projects', 'deploy') and press Enter..." 
+                autocomplete="off" 
+                autocorrect="off" 
+                autocapitalize="off" 
+                spellcheck="false" 
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">
+            <i class="fa-solid fa-handshake"></i> Let's Connect
+          </div>
+          <h2 class="section-title">Open to <span class="gradient-text">Cloud &amp; DevOps Opportunities</span></h2>
+          <p class="section-subtitle">Interested in connecting with hiring managers and recruiters for Junior DevOps, Associate Cloud Engineer, and Cloud Support roles.</p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Direct Channels -->
+          <div class="contact-info-card">
+            <div>
+              <h3 style="font-size: 1.35rem; font-weight: 800; margin-bottom: 0.5rem;">Let's Connect</h3>
+              <p style="color: var(--text-secondary); font-size: 0.95rem;">I am actively seeking full-time opportunities where I can contribute my hands-on knowledge of AWS, Docker, Linux, and IT troubleshooting.</p>
+            </div>
+
+            <div class="contact-direct-list">
+              <div class="contact-item">
+                <div class="c-icon" style="color: #0077b5;"><i class="fa-brands fa-linkedin"></i></div>
+                <div class="c-detail">
+                  <span>LinkedIn Profile</span>
+                  <strong><a href="https://www.linkedin.com/in/san-jeffrey-95a589354/" target="_blank" rel="noopener noreferrer">linkedin.com/in/san-jeffrey-95a589354</a></strong>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="c-icon"><i class="fa-brands fa-github"></i></div>
+                <div class="c-detail">
+                  <span>GitHub Repository</span>
+                  <strong><a href="https://github.com/san-jeffrey/cloud-deploy" target="_blank" rel="noopener noreferrer">github.com/san-jeffrey/cloud-deploy</a></strong>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="c-icon" style="color: var(--accent-amber);"><i class="fa-solid fa-award"></i></div>
+                <div class="c-detail">
+                  <span>AWS Academy Credly Badge</span>
+                  <strong><a href="https://www.credly.com/go/x3OfPJyM" target="_blank" rel="noopener noreferrer">credly.com/go/x3OfPJyM</a></strong>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="c-icon"><i class="fa-solid fa-location-dot"></i></div>
+                <div class="c-detail">
+                  <span>Location</span>
+                  <strong>Kanyakumari, Tamil Nadu, India</strong>
+                </div>
+              </div>
+            </div>
+
+            <div style="margin-top: auto; padding-top: 1rem; border-top: 1px solid var(--border-subtle);">
+              <span style="font-size: 0.8rem; font-weight: 700; color: var(--accent-emerald); text-transform: uppercase; letter-spacing: 0.05em; display: flex; align-items: center; gap: 0.4rem;">
+                <span class="status-pulse"></span> Immediate Availability for Cloud Roles
+              </span>
+            </div>
+          </div>
+
+          <!-- Contact Form -->
+          <div class="contact-form-card">
+            <form id="contact-form" class="contact-form">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="c-name">Your Name *</label>
+                  <input type="text" id="c-name" name="name" class="form-control" placeholder="e.g. Hiring Manager / Recruiter" required />
+                </div>
+                <div class="form-group">
+                  <label for="c-email">Your Work Email *</label>
+                  <input type="email" id="c-email" name="email" class="form-control" placeholder="recruiter@company.com" required />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="c-subject">Opportunity / Role Scope</label>
+                <input type="text" id="c-subject" name="subject" class="form-control" placeholder="e.g. Junior DevOps Engineer / Associate Cloud Role" />
+              </div>
+
+              <div class="form-group">
+                <label for="c-message">Message *</label>
+                <textarea id="c-message" name="message" class="form-control" placeholder="Share role details, team requirements, or interview process..." required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 0.5rem;">
+                <i class="fa-solid fa-paper-plane"></i> Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Project Detail Modal -->
+  <div class="modal-backdrop" id="project-modal" aria-hidden="true" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h4 class="modal-title" id="modal-project-title">Project Details</h4>
+        <button class="modal-close-btn" id="modal-close-btn" aria-label="Close modal">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      <div class="modal-body" id="modal-project-body">
+        <!-- Populated on click -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Container -->
+  <div class="toast-container" id="toast-container" aria-live="polite"></div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <a href="#hero" class="nav-brand">
+          <div class="brand-icon">&gt;_</div>
+          <span class="brand-text">san.<span>devops</span></span>
+        </a>
+
+        <div class="footer-copy">
+          Designed for Cloud Engineering &amp; DevOps Opportunities • San Jeffrey D
+        </div>
+
+        <div class="footer-links">
+          <a href="https://github.com/san-jeffrey/cloud-deploy" target="_blank" rel="noopener noreferrer" class="social-link" title="GitHub"><i class="fa-brands fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/san-jeffrey-95a589354/" target="_blank" rel="noopener noreferrer" class="social-link" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="https://www.credly.com/go/x3OfPJyM" target="_blank" rel="noopener noreferrer" class="social-link" title="Credly Badge" style="color: var(--accent-amber);"><i class="fa-solid fa-award"></i></a>
+          <button class="scroll-top-btn" id="scroll-top-btn" aria-label="Scroll back to top" title="Back to top">
+            <i class="fa-solid fa-arrow-up"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="projects.js"></script>
+  <script src="script.js"></script>
 </body>
-
 </html>

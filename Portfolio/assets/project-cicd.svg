@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg-grad-cicd" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b1120"/>
+      <stop offset="100%" stop-color="#1e1b4b"/>
+    </linearGradient>
+    <linearGradient id="flow-line" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="50%" stop-color="#818cf8"/>
+      <stop offset="100%" stop-color="#34d399"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#bg-grad-cicd)"/>
+  
+  <!-- Subtle Grid -->
+  <g stroke="#ffffff" stroke-opacity="0.04" stroke-width="1">
+    <path d="M 0,90 L 800,90 M 0,180 L 800,180 M 0,270 L 800,270 M 0,360 L 800,360"/>
+    <path d="M 160,0 L 160,450 M 320,0 L 320,450 M 480,0 L 480,450 M 640,0 L 640,450"/>
+  </g>
+
+  <!-- Title Badge -->
+  <rect x="40" y="28" width="310" height="34" rx="17" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5"/>
+  <text x="195" y="50" text-anchor="middle" fill="#38bdf8" font-family="monospace" font-size="12" font-weight="bold">🚀 CLOUDDEPLOY ARCHITECTURE</text>
+
+  <!-- Architecture Flow Boxes -->
+  <g transform="translate(45, 175)">
+    <!-- Stage 1: Developer & Git -->
+    <rect x="0" y="-55" width="115" height="110" rx="12" fill="#0f172a" stroke="#38bdf8" stroke-width="2"/>
+    <circle cx="57" cy="-12" r="20" fill="#0284c7"/>
+    <text x="57" y="-6" text-anchor="middle" fill="#fff" font-family="monospace" font-size="13" font-weight="bold">Git</text>
+    <text x="57" y="26" text-anchor="middle" fill="#f8fafc" font-family="sans-serif" font-size="11" font-weight="bold">Developer</text>
+    <text x="57" y="42" text-anchor="middle" fill="#94a3b8" font-family="monospace" font-size="10">&amp; Git Repo</text>
+    <circle cx="98" cy="-40" r="4" fill="#22c55e"/>
+
+    <!-- Arrow 1 -->
+    <path d="M 120,0 L 145,0" stroke="url(#flow-line)" stroke-width="3"/>
+
+    <!-- Stage 2: GitHub -->
+    <rect x="150" y="-55" width="115" height="110" rx="12" fill="#0f172a" stroke="#818cf8" stroke-width="2"/>
+    <circle cx="207" cy="-12" r="20" fill="#4338ca"/>
+    <text x="207" y="-6" text-anchor="middle" fill="#fff" font-family="sans-serif" font-size="12">🐙</text>
+    <text x="207" y="26" text-anchor="middle" fill="#f8fafc" font-family="sans-serif" font-size="11" font-weight="bold">GitHub</text>
+    <text x="207" y="42" text-anchor="middle" fill="#94a3b8" font-family="monospace" font-size="10">Remote Repo</text>
+    <circle cx="248" cy="-40" r="4" fill="#22c55e"/>
+
+    <!-- Arrow 2 -->
+    <path d="M 270,0 L 295,0" stroke="url(#flow-line)" stroke-width="3"/>
+
+    <!-- Stage 3: Docker & Compose -->
+    <rect x="300" y="-55" width="125" height="110" rx="12" fill="#0f172a" stroke="#0284c7" stroke-width="2"/>
+    <circle cx="362" cy="-12" r="20" fill="#0369a1"/>
+    <text x="362" y="-6" text-anchor="middle" fill="#fff" font-family="sans-serif" font-size="12">🐳</text>
+    <text x="362" y="26" text-anchor="middle" fill="#f8fafc" font-family="sans-serif" font-size="11" font-weight="bold">Docker</text>
+    <text x="362" y="42" text-anchor="middle" fill="#94a3b8" font-family="monospace" font-size="10">Dockerfile &amp; Compose</text>
+    <circle cx="408" cy="-40" r="4" fill="#22c55e"/>
+
+    <!-- Arrow 3 -->
+    <path d="M 430,0 L 455,0" stroke="url(#flow-line)" stroke-width="3"/>
+
+    <!-- Stage 4: Nginx Container -->
+    <rect x="460" y="-55" width="115" height="110" rx="12" fill="#0f172a" stroke="#10b981" stroke-width="2"/>
+    <circle cx="517" cy="-12" r="20" fill="#047857"/>
+    <text x="517" y="-6" text-anchor="middle" fill="#fff" font-family="monospace" font-size="12" font-weight="bold">NGINX</text>
+    <text x="517" y="26" text-anchor="middle" fill="#f8fafc" font-family="sans-serif" font-size="11" font-weight="bold">Nginx</text>
+    <text x="517" y="42" text-anchor="middle" fill="#94a3b8" font-family="monospace" font-size="10">Port 8080:80</text>
+    <circle cx="558" cy="-40" r="4" fill="#22c55e"/>
+
+    <!-- Arrow 4 -->
+    <path d="M 580,0 L 605,0" stroke="url(#flow-line)" stroke-width="3" stroke-dasharray="4,4"/>
+
+    <!-- Stage 5: AWS EC2 (Planned) -->
+    <rect x="610" y="-55" width="110" height="110" rx="12" fill="#0f172a" stroke="#f59e0b" stroke-width="2" stroke-dasharray="4,4"/>
+    <circle cx="665" cy="-12" r="20" fill="#b45309"/>
+    <text x="665" y="-6" text-anchor="middle" fill="#fff" font-family="monospace" font-size="11" font-weight="bold">AWS</text>
+    <text x="665" y="26" text-anchor="middle" fill="#fcd34d" font-family="sans-serif" font-size="11" font-weight="bold">AWS EC2</text>
+    <text x="665" y="42" text-anchor="middle" fill="#fbbf24" font-family="monospace" font-size="9">(Target Deploy)</text>
+  </g>
+
+  <!-- Bottom Details Tag -->
+  <rect x="180" y="380" width="440" height="32" rx="16" fill="#1e293b" stroke="#334155"/>
+  <text x="400" y="401" text-anchor="middle" fill="#94a3b8" font-family="monospace" font-size="11">Containerized Nginx Web App • Port Mapping • Repeatable Build</text>
+</svg>
+

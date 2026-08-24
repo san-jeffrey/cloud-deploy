@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <defs>
+    <linearGradient id="avatar-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <linearGradient id="glow-circle" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="50%" stop-color="#818cf8"/>
+      <stop offset="100%" stop-color="#c084fc"/>
+    </linearGradient>
+  </defs>
+  
+  <circle cx="100" cy="100" r="95" fill="url(#avatar-bg)" stroke="url(#glow-circle)" stroke-width="4"/>
+  
+  <!-- Cool Modern Dev Avatar Silhouette / Illustration -->
+  <g transform="translate(100, 105)">
+    <!-- Shoulders / Hood -->
+    <path d="M -50,65 C -45,25 -25,15 0,15 C 25,15 45,25 50,65 Z" fill="#334155"/>
+    <path d="M -30,65 C -25,35 -15,28 0,28 C 15,28 25,35 30,65 Z" fill="#1e293b"/>
+
+    <!-- Head -->
+    <ellipse cx="0" cy="-10" rx="26" ry="32" fill="#f8fafc"/>
+    <!-- Hair / Beanie -->
+    <path d="M -26,-15 C -26,-40 26,-40 26,-15 C 26,-22 -26,-22 -26,-15 Z" fill="#0f172a"/>
+    <path d="M -26,-12 C -28,-36 28,-36 26,-12 C 15,-28 -15,-28 -26,-12 Z" fill="#38bdf8"/>
+    
+    <!-- Glasses -->
+    <rect x="-22" y="-14" width="18" height="12" rx="3" fill="none" stroke="#0f172a" stroke-width="2.5"/>
+    <rect x="4" y="-14" width="18" height="12" rx="3" fill="none" stroke="#0f172a" stroke-width="2.5"/>
+    <line x1="-4" y1="-8" x2="4" y2="-8" stroke="#0f172a" stroke-width="2.5"/>
+    
+    <!-- Terminal prompt badge -->
+    <circle cx="28" cy="20" r="16" fill="#0284c7" stroke="#38bdf8" stroke-width="2"/>
+    <text x="28" y="25" text-anchor="middle" fill="#ffffff" font-family="monospace" font-size="12" font-weight="bold">&gt;_</text>
+  </g>
+</svg>
+

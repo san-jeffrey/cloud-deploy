@@ -1,0 +1,6 @@
+services:
+  web:
+    build: .
+    container_name: cloud-web
+    ports:
+      - "8080:80"
