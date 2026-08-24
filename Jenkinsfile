@@ -28,16 +28,18 @@ pipeline {
             usernameVariable: 'DOCKER_USERNAME',
             passwordVariable: 'DOCKER_PASSWORD'
         )]) {
-            bat 'docker login -u "%DOCKER_USERNAME%" -p "%DOCKER_PASSWORD%"'
+            bat 'echo %DOCKER_PASSWORD%| docker login -u "%DOCKER_USERNAME%" --password-stdin'
             bat 'docker push sanjeffrey/cloud-deploy:%BUILD_NUMBER%'
         }
     }
 }
 
         stage('Deploy') {
-            steps {
-                echo 'Deployment stage will be configured next.'
-            }
-        }
+    steps {
+        bat 'docker stop cloud-web || exit /b 0'
+        bat 'docker rm cloud-web || exit /b 0'
+        bat 'docker run -d --name cloud-web -p 8080:80 sanjeffrey/cloud-deploy:%BUILD_NUMBER%'
+    }
+}
     }
 }
