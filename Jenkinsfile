@@ -22,10 +22,17 @@ pipeline {
         }
 
         stage('Docker Push') {
-            steps {
-                echo 'Docker push will be configured with Jenkins credentials next.'
-            }
+    steps {
+        withCredentials([usernamePassword(
+            credentialsId: 'dockerhub-creds',
+            usernameVariable: 'DOCKER_USERNAME',
+            passwordVariable: 'DOCKER_PASSWORD'
+        )]) {
+            bat 'docker login -u "%DOCKER_USERNAME%" -p "%DOCKER_PASSWORD%"'
+            bat 'docker push sanjeffrey/cloud-deploy:%BUILD_NUMBER%'
         }
+    }
+}
 
         stage('Deploy') {
             steps {
