@@ -40,6 +40,8 @@ pipeline {
         bat 'docker stop cloud-web || exit /b 0'
         bat 'docker rm cloud-web || exit /b 0'
         bat 'docker run -d --name cloud-web -p 8080:80 sanjeffrey/cloud-deploy:%BUILD_NUMBER%'
+        bat 'timeout /t 5 /nobreak'
+        bat 'curl -f http://localhost:8080'
     }
 }
     }
